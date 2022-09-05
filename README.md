@@ -7,7 +7,7 @@ Arquivo docker-compose para automação da instalação do MySQL no docker
 - `Funcionalidade 2`: cria um volume para persistência dos dados.
 
 ## Aplicação
-![Docker Compose](./img/docker_compose_mysql.JPG)
+![Docker Compose](./img/docker-compose-mysql.PNG)
 
 ## Execução
 Iniciando o docker-compose com o parametro -d, para rodar em segundo plano
