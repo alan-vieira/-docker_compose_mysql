@@ -10,7 +10,7 @@ Arquivo docker-compose para automação da instalação do MySQL no docker
 ![Docker Compose](./img/docker_compose_mysql.JPG)
 
 ## Execução
-Iniciando o docker-compose o parametro -d, para rodar em segundo plano
+Iniciando o docker-compose com o parametro -d, para rodar em segundo plano
 ```bash
 docker-compose up -d
 ```
