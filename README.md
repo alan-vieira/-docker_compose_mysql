@@ -3,7 +3,7 @@
 Arquivo docker-compose para automação da instalação do MySQL no docker
 
 ## Funcionalidades do projeto
-- `Funcionalidade 1`: atomatiza o processo de instalação do gerenciador do PostgreSQL no docker.
+- `Funcionalidade 1`: atomatiza o processo de instalação do gerenciador do MySQL no docker.
 - `Funcionalidade 2`: cria um volume para persistência dos dados.
 
 ## Aplicação
