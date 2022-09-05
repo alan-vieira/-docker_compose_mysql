@@ -15,24 +15,25 @@ Iniciando o docker-compose com o parametro -d, para rodar em segundo plano
 docker-compose up -d
 ```
 
-Conectando-se ao servidor MySQL de dentro do container
+Por questão de seguranão, o MySQL restringe outras conexões além da máquina local (neste caso, container Docker) por padrão. Então para podermos efetuar a conexão além da nossa máquina local, vamos alterar essa restrição.
+
+Passo 1: Conectando-se ao servidor MySQL de dentro do container
 ```bash
 docker exec -it my-mysql bash
 ```
-Assim que estiver dentro do container, você pode se conectar ao servidor
+Passo 2: Assim que estiver dentro do container, você pode se conectar ao servidor
 ```bash
 mysql -u root -p
 ```
-Crie um novo banco de dados para efetuar testes
+Passo 3: Crie um novo banco de dados para efetuar testes
 ```bash
 CREATE DATABASE MYSQLTESTE;
 ```
-
-Por padrão, o MySQL restringe outras conexões além da máquina local (neste caso, contêiner Docker) por razões de segurança. Portanto, para se conectar a partir da máquina local, você deve alterar a restrição de conexão:
+Passo 4: Altere a restrição de conexão:
 ```bash
 update mysql.user set host='%' where user='root';
 ```
-A seguir, execute o seguinte para que as alterações no usuário root tenham efeito:
+Passo 5: Execute o seguinte comando para que as alterações no usuário root tenham efeito
 ```bash
 FLUSH PRIVILEGES;
 ```
